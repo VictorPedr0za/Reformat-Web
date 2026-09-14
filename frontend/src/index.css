@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #d0021b;
+  --color-primary-dark: #a50115;
+  --color-ink: #17161a;
+}
+
+:root {
+  /* Strong easing curves — the built-in CSS ones are too weak for deliberate motion. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  background: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Nav link underline (state indication) ---------- */
+.nav-link {
+  position: relative;
+  color: #4b5563;
+  transition: color 160ms ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -4px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: right 200ms var(--ease-out);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-ink);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  right: 0;
+}
+
+/* ---------- Dropdown / popover (Líneas menu) ---------- */
+.dropdown-panel {
+  transform-origin: top center;
+  transition:
+    opacity 200ms var(--ease-out),
+    transform 200ms var(--ease-out);
+}
+
+.dropdown-panel[data-state="closed"] {
+  opacity: 0;
+  transform: scale(0.96) translateY(-4px);
+  pointer-events: none;
+}
+
+.dropdown-panel[data-state="open"] {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* ---------- Mobile drawer ---------- */
+.mobile-drawer {
+  transition: transform 400ms var(--ease-drawer);
+  transform: translateX(100%);
+}
+
+.mobile-drawer[data-state="open"] {
+  transform: translateX(0);
+}
+
+.mobile-backdrop {
+  transition: opacity 300ms ease;
+  opacity: 0;
+}
+
+.mobile-backdrop[data-state="open"] {
+  opacity: 1;
+}
+
+/* ---------- Buttons / pressables ---------- */
+.btn-press {
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.btn-press:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Card lift ---------- */
+.card-lift {
+  transition:
+    transform 200ms var(--ease-out),
+    box-shadow 200ms var(--ease-out),
+    border-color 200ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -20px rgb(0 0 0 / 0.25);
+  }
+}
+
+/* ---------- Scroll reveal (marketing surfaces only) ---------- */
+.reveal {
+  clip-path: inset(0 0 100% 0);
+  opacity: 0;
+  transition:
+    clip-path 600ms var(--ease-in-out),
+    opacity 500ms ease;
+}
+
+.reveal[data-visible="true"] {
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
+}
+
+/* ---------- Stagger helper ---------- */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 500ms var(--ease-out) forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Form feedback message ---------- */
+.form-msg {
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity 200ms var(--ease-out),
+    transform 200ms var(--ease-out);
+}
+
+.form-msg[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Page transition ---------- */
+.page-enter {
+  animation: pageFade 350ms var(--ease-out) both;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
