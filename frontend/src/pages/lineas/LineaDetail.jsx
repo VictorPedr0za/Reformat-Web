@@ -15,22 +15,22 @@ export default function LineaDetail() {
     <div>
       <PageHero eyebrow="Línea" title={linea.nombre} subtitle={linea.descripcion} gradient={linea.gradient} />
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="relative mx-auto max-w-5xl px-6 py-16">
         <Reveal>
-          <h2 className="text-2xl font-bold text-neutral-900">Proyectos</h2>
+          <h2 className="text-2xl font-bold text-white">Proyectos</h2>
         </Reveal>
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="stagger-item card-lift rounded-2xl border border-dashed border-black/10 p-6 text-center text-neutral-400">
-            <p className="font-semibold text-neutral-500">Próximamente</p>
+          <div className="stagger-item card-lift rounded-2xl border border-dashed border-white/15 p-6 text-center text-neutral-500">
+            <p className="font-semibold text-neutral-400">Próximamente</p>
             <p className="mt-1 text-sm">Los proyectos de esta línea se publicarán aquí.</p>
           </div>
         </div>
       </section>
 
-      <section className="border-t border-black/5 bg-neutral-50 py-16">
+      <section className="relative border-t border-white/10 py-16">
         <div className="mx-auto max-w-5xl px-6">
           <Reveal>
-            <h2 className="text-2xl font-bold text-neutral-900">Integrantes</h2>
+            <h2 className="text-2xl font-bold text-white">Integrantes</h2>
           </Reveal>
           <div className="mt-8 grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4">
             <PerfilCard nombre={linea.responsable} rol="Responsable de línea" index={0} />
@@ -38,10 +38,10 @@ export default function LineaDetail() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 text-center">
+      <section className="relative mx-auto max-w-5xl px-6 py-16 text-center">
         <Reveal>
-          <h2 className="text-2xl font-bold text-neutral-900">Únete a esta línea</h2>
-          <p className="mx-auto mt-2 max-w-md text-neutral-500">
+          <h2 className="text-2xl font-bold text-white">Únete a esta línea</h2>
+          <p className="mx-auto mt-2 max-w-md text-neutral-400">
             Cuéntanos por qué quieres ser parte de {linea.nombre.toLowerCase()} y te contactaremos pronto.
           </p>
         </Reveal>

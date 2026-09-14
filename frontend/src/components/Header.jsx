@@ -61,12 +61,12 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        "sticky top-0 z-50 border-b bg-white/80 backdrop-blur-md transition-shadow duration-200",
-        scrolled ? "border-black/5 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]" : "border-transparent"
+        "sticky top-0 z-50 border-b bg-black/70 backdrop-blur-md transition-shadow duration-200",
+        scrolled ? "border-white/10 shadow-[0_1px_0_0_rgba(255,255,255,0.04)]" : "border-transparent"
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <NavLink to="/" className="text-lg font-extrabold tracking-tight text-neutral-900">
+        <NavLink to="/" className="text-lg font-extrabold tracking-tight text-white">
           REFORMAT
         </NavLink>
 
@@ -96,19 +96,19 @@ export default function Header() {
             <div
               role="menu"
               data-state={dropdownOpen ? "open" : "closed"}
-              className="dropdown-panel absolute left-1/2 top-full mt-3 w-56 -translate-x-1/2 rounded-xl border border-black/5 bg-white p-2 shadow-xl"
+              className="dropdown-panel absolute left-1/2 top-full mt-3 w-56 -translate-x-1/2 rounded-xl border border-white/10 bg-neutral-900 p-2 shadow-xl shadow-black/40"
             >
               {lineas.map((linea) => (
                 <NavLink
                   key={linea.slug}
                   to={`/lineas/${linea.slug}`}
                   role="menuitem"
-                  className="block rounded-lg px-3 py-2 text-sm text-neutral-700 transition-colors duration-160 hover:bg-neutral-50 hover:text-[var(--color-primary)]"
+                  className="block rounded-lg px-3 py-2 text-sm text-neutral-300 transition-colors duration-160 hover:bg-white/5 hover:text-[var(--color-primary)]"
                 >
                   {linea.nombre}
                 </NavLink>
               ))}
-              <div className="my-1 h-px bg-black/5" />
+              <div className="my-1 h-px bg-white/10" />
               <NavLink
                 to="/lineas"
                 role="menuitem"
@@ -129,7 +129,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen(true)}
-          className="btn-press flex h-10 w-10 items-center justify-center rounded-lg border border-black/5 md:hidden"
+          className="btn-press flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
           aria-label="Abrir menú"
         >
           <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -148,7 +148,7 @@ export default function Header() {
       />
       <div
         data-state={mobileOpen ? "open" : "closed"}
-        className="mobile-drawer fixed inset-y-0 right-0 z-50 flex w-72 flex-col gap-1 bg-white p-6 shadow-2xl md:hidden"
+        className="mobile-drawer fixed inset-y-0 right-0 z-50 flex w-72 flex-col gap-1 bg-neutral-950 p-6 text-white shadow-2xl shadow-black/60 md:hidden"
         role="dialog"
         aria-modal="true"
       >
@@ -157,7 +157,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen(false)}
-            className="btn-press flex h-9 w-9 items-center justify-center rounded-lg border border-black/5"
+            className="btn-press flex h-9 w-9 items-center justify-center rounded-lg border border-white/10"
             aria-label="Cerrar menú"
           >
             <svg className="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -166,21 +166,21 @@ export default function Header() {
           </button>
         </div>
 
-        <p className="px-1 pb-1 text-xs font-semibold uppercase tracking-wide text-neutral-400">Líneas</p>
+        <p className="px-1 pb-1 text-xs font-semibold uppercase tracking-wide text-neutral-500">Líneas</p>
         {lineas.map((linea) => (
           <NavLink
             key={linea.slug}
             to={`/lineas/${linea.slug}`}
-            className="rounded-lg px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+            className="rounded-lg px-3 py-2 text-sm text-neutral-300 hover:bg-white/5"
           >
             {linea.nombre}
           </NavLink>
         ))}
 
-        <div className="my-3 h-px bg-black/5" />
+        <div className="my-3 h-px bg-white/10" />
 
         {NAV_LINKS.map((link) => (
-          <NavLink key={link.to} to={link.to} className="rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50">
+          <NavLink key={link.to} to={link.to} className="rounded-lg px-3 py-2 text-sm font-medium text-neutral-300 hover:bg-white/5">
             {link.label}
           </NavLink>
         ))}

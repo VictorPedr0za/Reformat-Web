@@ -15,10 +15,10 @@ export default function Conocenos() {
     <div>
       <PageHero eyebrow="Semillero" title="Conócenos" subtitle="Quiénes somos y qué nos mueve a crear." />
 
-      <section className="mx-auto max-w-4xl px-6 py-16">
+      <section className="relative mx-auto max-w-4xl px-6 py-16">
         <Reveal>
-          <h2 className="text-2xl font-bold text-neutral-900">Videoreel</h2>
-          <div className="mt-5 flex aspect-video items-center justify-center rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 text-white">
+          <h2 className="text-2xl font-bold text-white">Videoreel</h2>
+          <div className="surface mt-5 flex aspect-video items-center justify-center rounded-2xl text-white">
             <div className="flex flex-col items-center gap-3">
               <span className="btn-press flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="ml-0.5 h-6 w-6">
@@ -31,8 +31,8 @@ export default function Conocenos() {
         </Reveal>
 
         <Reveal className="mt-14">
-          <h2 className="text-2xl font-bold text-neutral-900">Presentación</h2>
-          <p className="mt-3 text-neutral-500">
+          <h2 className="text-2xl font-bold text-white">Presentación</h2>
+          <p className="mt-3 text-neutral-400">
             Reformat es el semillero que transforma ideas en proyectos audiovisuales, de
             animación, mapping, videomapping y desarrollo web/app. Creamos un espacio para
             experimentar, aprender haciendo y construir un portafolio real trabajando en equipo.
@@ -40,10 +40,10 @@ export default function Conocenos() {
         </Reveal>
       </section>
 
-      <section className="border-t border-black/5 bg-neutral-50 py-16">
+      <section className="relative border-t border-white/10 py-16">
         <div className="mx-auto max-w-4xl px-6">
           <Reveal>
-            <h2 className="text-2xl font-bold text-neutral-900">Perfiles</h2>
+            <h2 className="text-2xl font-bold text-white">Perfiles</h2>
           </Reveal>
           <div className="mt-8 grid grid-cols-2 gap-8 sm:grid-cols-4">
             {EQUIPO.map((persona, i) => (
@@ -53,10 +53,10 @@ export default function Conocenos() {
         </div>
       </section>
 
-      <section id="unete" className="mx-auto max-w-4xl scroll-mt-24 px-6 py-16 text-center">
+      <section id="unete" className="relative mx-auto max-w-4xl scroll-mt-24 px-6 py-16 text-center">
         <Reveal>
-          <h2 className="text-2xl font-bold text-neutral-900">Únete a nosotros</h2>
-          <p className="mx-auto mt-2 max-w-md text-neutral-500">
+          <h2 className="text-2xl font-bold text-white">Únete a nosotros</h2>
+          <p className="mx-auto mt-2 max-w-md text-neutral-400">
             Cuéntanos un poco sobre ti y por qué te gustaría ser parte de Reformat.
           </p>
         </Reveal>

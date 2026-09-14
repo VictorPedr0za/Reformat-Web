@@ -16,12 +16,13 @@
 
 html {
   scroll-behavior: smooth;
+  background: #050505;
 }
 
 body {
   font-family: var(--font-display);
-  color: var(--color-ink);
-  background: #fff;
+  color: #f5f5f5;
+  background: #050505;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -41,7 +42,7 @@ body {
 /* ---------- Nav link underline (state indication) ---------- */
 .nav-link {
   position: relative;
-  color: #4b5563;
+  color: rgb(255 255 255 / 0.65);
   transition: color 160ms ease;
 }
 
@@ -59,7 +60,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--color-ink);
+  color: #ffffff;
 }
 
 .nav-link:hover::after,
@@ -128,7 +129,9 @@ body {
 @media (hover: hover) and (pointer: fine) {
   .card-lift:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px -20px rgb(0 0 0 / 0.25);
+    box-shadow:
+      0 20px 45px -20px rgb(0 0 0 / 0.6),
+      0 0 40px -12px rgb(208 2 27 / 0.25);
   }
 }
 
@@ -172,6 +175,17 @@ body {
 .form-msg[data-visible="true"] {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ---------- Translucent dark surfaces (let the ambient glow show through) ---------- */
+.surface {
+  background: rgb(255 255 255 / 0.03);
+  border: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.surface-strong {
+  background: rgb(255 255 255 / 0.05);
+  border: 1px solid rgb(255 255 255 / 0.1);
 }
 
 /* ---------- Page transition ---------- */

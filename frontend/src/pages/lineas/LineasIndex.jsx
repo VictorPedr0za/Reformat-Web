@@ -10,7 +10,7 @@ export default function LineasIndex() {
         title="Nuestras líneas"
         subtitle="Cada línea tiene sus propios proyectos, integrantes y un formulario para unirte."
       />
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="relative mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {lineas.map((linea, i) => (
             <LineaCard key={linea.slug} linea={linea} index={i} />

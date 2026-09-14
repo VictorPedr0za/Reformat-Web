@@ -2,7 +2,7 @@ import { useState } from "react";
 import { submitForm } from "../lib/api.js";
 
 const inputClass =
-  "w-full rounded-lg border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 outline-none transition-colors duration-160 focus:border-[var(--color-primary)]";
+  "w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-neutral-500 outline-none transition-colors duration-160 focus:border-[var(--color-primary)]";
 
 export default function ContactForm() {
   const [status, setStatus] = useState({ state: "idle", message: "" });
@@ -50,7 +50,7 @@ export default function ContactForm() {
       <p
         data-visible={Boolean(status.message)}
         className={`form-msg text-sm font-medium ${
-          status.state === "ok" ? "text-emerald-600" : "text-red-600"
+          status.state === "ok" ? "text-emerald-400" : "text-red-400"
         }`}
       >
         {status.message}

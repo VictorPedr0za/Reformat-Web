@@ -43,10 +43,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section className="relative mx-auto max-w-6xl px-6 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-extrabold text-neutral-900">Nuestras líneas</h2>
-          <p className="mt-3 text-neutral-500">
+          <h2 className="text-3xl font-extrabold text-white">Nuestras líneas</h2>
+          <p className="mt-3 text-neutral-400">
             Cada línea tiene sus propios proyectos, integrantes y un formulario para unirte.
           </p>
         </Reveal>
@@ -58,10 +58,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-black/5 bg-neutral-50">
+      <section className="relative border-t border-white/10">
         <Reveal className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 py-20 text-center">
-          <h2 className="text-3xl font-extrabold text-neutral-900">¿Quieres ser parte del semillero?</h2>
-          <p className="max-w-xl text-neutral-500">
+          <h2 className="text-3xl font-extrabold text-white">¿Quieres ser parte del semillero?</h2>
+          <p className="max-w-xl text-neutral-400">
             Únete a Reformat y desarrolla proyectos reales junto a un equipo multidisciplinario.
           </p>
           <Link

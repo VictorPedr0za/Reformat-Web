@@ -4,7 +4,7 @@ import { SOCIALS } from "../data/socials.js";
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-black/5 bg-neutral-950 text-neutral-300">
+    <footer className="relative mt-24 border-t border-white/10 bg-neutral-950 text-neutral-300">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <p className="text-lg font-extrabold text-white">REFORMAT</p>

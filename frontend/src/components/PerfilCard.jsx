@@ -34,8 +34,8 @@ export default function PerfilCard({ nombre, rol, index = 0 }) {
         {initials(nombre)}
       </div>
       <div>
-        <p className="font-semibold text-neutral-900">{nombre}</p>
-        {rol && <p className="text-sm text-neutral-500">{rol}</p>}
+        <p className="font-semibold text-white">{nombre}</p>
+        {rol && <p className="text-sm text-neutral-400">{rol}</p>}
       </div>
     </div>
   );
