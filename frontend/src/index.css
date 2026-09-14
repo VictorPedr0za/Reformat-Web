@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cabinet Grotesk", ui-sans-serif, system-ui, sans-serif;
   --color-primary: #d0021b;
   --color-primary-dark: #a50115;
   --color-ink: #17161a;
@@ -186,6 +186,66 @@ body {
 .surface-strong {
   background: rgb(255 255 255 / 0.05);
   border: 1px solid rgb(255 255 255 / 0.1);
+}
+
+/* ---------- Infinite marquee ---------- */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 26s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- Bento tile ---------- */
+.bento-tile {
+  transition:
+    transform 500ms var(--ease-out),
+    box-shadow 400ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bento-tile:hover {
+    box-shadow:
+      0 30px 60px -25px rgb(0 0 0 / 0.7),
+      0 0 50px -15px rgb(208 2 27 / 0.3);
+  }
+}
+
+.bento-tile-img {
+  transition: transform 700ms var(--ease-out), filter 700ms var(--ease-out);
+}
+
+.bento-tile:hover .bento-tile-img {
+  transform: scale(1.08);
+  filter: grayscale(0) contrast(1.1);
+}
+
+/* ---------- Grain texture overlay ---------- */
+.grain-surface {
+  position: relative;
+  isolation: isolate;
+}
+
+.grain-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
 }
 
 /* ---------- Page transition ---------- */

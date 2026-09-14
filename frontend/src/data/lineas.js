@@ -7,6 +7,7 @@ export const lineas = [
       "Contamos historias a través de la cámara: guion, rodaje, iluminación y edición para producir piezas audiovisuales con identidad propia.",
     responsable: "Santiago Quintero",
     gradient: "from-rose-500 to-red-700",
+    image: "reformat-film-set",
   },
   {
     slug: "animacion",
@@ -16,6 +17,7 @@ export const lineas = [
       "Damos vida a ideas cuadro a cuadro: diseño de personajes, motion graphics y animación 2D/3D aplicada a proyectos narrativos y comerciales.",
     responsable: "Esteban Camilo Mera",
     gradient: "from-orange-500 to-rose-600",
+    image: "reformat-character-studio",
   },
   {
     slug: "videomapping",
@@ -25,6 +27,7 @@ export const lineas = [
       "Llevamos el mapping a gran escala: proyecciones arquitectónicas sobre fachadas y espacios, combinando video, sonido y diseño espacial.",
     responsable: "Angie Nathalia Guevara",
     gradient: "from-red-600 to-orange-600",
+    image: "reformat-facade-projection",
   },
   {
     slug: "webapp",
@@ -34,6 +37,7 @@ export const lineas = [
       "Construimos la infraestructura digital de Reformat: sitios web, aplicaciones y herramientas que dan soporte a todas las demás líneas.",
     responsable: "Isabella Narvaez",
     gradient: "from-red-500 to-pink-600",
+    image: "reformat-code-desk",
   },
 ];
 

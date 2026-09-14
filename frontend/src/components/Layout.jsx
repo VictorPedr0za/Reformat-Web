@@ -12,7 +12,7 @@ export default function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className="relative flex min-h-screen flex-col bg-black text-neutral-100">
+    <div className="relative flex min-h-[100dvh] flex-col bg-neutral-950 text-neutral-100">
       <GlowBackground />
       <Header />
       <main key={location.pathname} className="page-enter relative flex-1">
