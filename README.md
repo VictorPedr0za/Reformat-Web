@@ -126,8 +126,8 @@ como "apoyo" o dividirse una de las más cargadas.
 | **Juan David Gaviria** | Frontend | Líneas — Audiovisual y Animación (+ índice de Líneas) | `frontend/pages/lineas/index.html`, `audiovisual.html`, `animacion.html` | `feature/juandavid-lineas-audiovisual-animacion` |
 | **Juan Sarmiento** | Frontend (y algo de backend) | Líneas — Mapping, Videomapping y Web/App | `frontend/pages/lineas/mapping.html`, `videomapping.html`, `webapp.html` | `feature/juansarmiento-lineas-mapping-videomapping-webapp` |
 | **Victor Pedroza** | Frontend + Backend (líder técnico / coordina el repo) | Noticias + Contacto (frontend), coordinación general del backend, soporte de Git a todo el equipo | `frontend/pages/noticias.html`, `contacto.html`, `backend/server.js` | `feature/victor-noticias-contacto` y `feature/victor-backend-coordinacion` |
-| **Esteban Camilo Mera** | Frontend | Login Asodisvalle y paginas | `backend/routes/contacto.js` | `feature/esteban-backend-contacto` |
-| **Javier Sandoval** | Frontend | Pag Principal Asodisvalle y Estructura de los test | `backend/routes/unete.js` | `feature/javier-backend-unete-deploy` |
+| **Esteban Camilo Mera** | Frontend | Login Asodisvalle y paginas | `frontend/escuela/Asodisvalle.js` | `feature/esteban-escuela-login` |
+| **Javier Sandoval** | Frontend | Pag Principal Asodisvalle y Estructura de los test | `frontend/escuela/asodisvalle` | `feature/javier-escuela-tests` |
 | **Salomé Galindez** | Diseño | Probar la pagina y testear cada seccion tanto en pc como en celular y anotar cada cosa| Variables `:root` de `style.css` (las edita ella misma o le dicta los valores a quien esté trabajando en esa página), `docs/CONTENIDO.md` | No necesita rama de código — revisa directamente en GitHub o en Live Server |
 | *(Nuevos integrantes)* | — | Toman una tarea de apoyo: reemplazar contenido placeholder, ayudar con pruebas, o dividir una de las líneas más cargadas | — | `feature/nombre-modulo` |
 
