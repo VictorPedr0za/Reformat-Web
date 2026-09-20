@@ -151,16 +151,8 @@ git checkout develop
 
 ## 5. Cómo correr el proyecto localmente
 
-### Frontend
-No necesita instalación:
-1. Abre la carpeta `reformat-web` en VS Code.
-2. Clic derecho sobre `frontend/index.html` → **"Open with Live Server"**.
-3. Se abre en el navegador, algo como `http://127.0.0.1:5500`.
 
-> ⚠️ No abras el HTML con doble clic (`file://...`): el header/footer
-> dinámico y los formularios no van a funcionar sin un servidor local.
-
-### Backend
+### Primero correr el Backend
 ```bash
 cd backend
 npm install          # instala las dependencias (primera vez o si cambian)
@@ -168,6 +160,23 @@ cp .env.example .env # crea tu configuración local
 npm run dev           # levanta el servidor con recarga automática
 ```
 Debe aparecer: `Servidor backend corriendo en http://localhost:3000`
+
+### Segundo correr el Frontend
+No necesita instalación:
+## Método 1 para correrlo
+1. Abre la carpeta `reformat-web` en VS Code.
+2. Clic derecho sobre `frontend/index.html` → **"Open with Live Server"**.
+3. Se abre en el navegador, algo como `http://127.0.0.1:5500`.
+
+## Método 2 para correrlo
+```bash
+cd frontend
+npm run dev           # levanta el servidor ya completo
+```
+
+> ⚠️ No abras el HTML con doble clic (`file://...`): el header/footer
+> dinámico y los formularios no van a funcionar sin un servidor local.
+
 
 Con el backend corriendo, los formularios (Contacto, Únete a esta línea) ya
 guardan la información de verdad (por ahora en archivos JSON dentro de
