@@ -29,6 +29,10 @@ app.get("/", (req, res) => {
   res.send("Backend de Reformat funcionando correctamente 🚀");
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor backend corriendo en http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Servidor backend corriendo en http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
