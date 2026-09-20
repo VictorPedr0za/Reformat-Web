@@ -163,12 +163,12 @@ Debe aparecer: `Servidor backend corriendo en http://localhost:3000`
 
 ### Segundo correr el Frontend
 No necesita instalación:
-## Método 1 para correrlo
+#### Método 1 para correrlo
 1. Abre la carpeta `reformat-web` en VS Code.
 2. Clic derecho sobre `frontend/index.html` → **"Open with Live Server"**.
 3. Se abre en el navegador, algo como `http://127.0.0.1:5500`.
 
-## Método 2 para correrlo
+#### Método 2 para correrlo
 ```bash
 cd frontend
 npm run dev           # levanta el servidor ya completo
