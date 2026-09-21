@@ -9,6 +9,8 @@ const NAV_LINKS = [
   { to: "/contacto", label: "Contacto" },
 ];
 
+const ESCUELA_URL = "/escuela/escuela.html";
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -124,6 +126,9 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
+          <a href={ESCUELA_URL} className="nav-link text-sm font-medium">
+            Escuela
+          </a>
         </nav>
 
         <button
@@ -184,6 +189,9 @@ export default function Header() {
             {link.label}
           </NavLink>
         ))}
+        <a href={ESCUELA_URL} className="rounded-lg px-3 py-2 text-sm font-medium text-neutral-300 hover:bg-white/5">
+          Escuela
+        </a>
       </div>
     </header>
   );

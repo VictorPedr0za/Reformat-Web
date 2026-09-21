@@ -38,6 +38,12 @@ export default function Home() {
             >
               Conócenos
             </Link>
+            <a
+              href="/escuela/escuela.html"
+              className="btn-press rounded-lg border border-white/20 px-7 py-3 font-semibold text-white hover:bg-white/5"
+            >
+              Ir a la Escuela
+            </a>
           </div>
         </div>
       </section>
