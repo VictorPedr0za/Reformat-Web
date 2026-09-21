@@ -9,6 +9,9 @@ const NAV_LINKS = [
   { to: "/contacto", label: "Contacto" },
 ];
 
+// The escuela module is a standalone static site (frontend/escuela), so it needs a full page load, not a router link.
+const ASODISVALLE_HREF = "/escuela/asodivalle/asodisvalle.html";
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -124,6 +127,10 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
+
+          <a href={ASODISVALLE_HREF} className="nav-link text-sm font-medium">
+            Asodisvalle
+          </a>
         </nav>
 
         <button
@@ -184,6 +191,10 @@ export default function Header() {
             {link.label}
           </NavLink>
         ))}
+
+        <a href={ASODISVALLE_HREF} className="rounded-lg px-3 py-2 text-sm font-medium text-neutral-300 hover:bg-white/5">
+          Asodisvalle
+        </a>
       </div>
     </header>
   );
