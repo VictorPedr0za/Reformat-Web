@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: #22c55e;
+    --color-secundario: #16a34a;
+    --color-fondo: #f4f7f5;
+    --color-blanco: #ffffff;
+    --color-texto: #1f2937;
+    --color-gris: #6b7280;
+    --color-borde: #d1d5db;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--color-principal);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--color-secundario);
+}
+
+/* =========================
+   INICIO ESCUELA
+========================= */
+
+.escuela-inicio {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.escuela-card {
+    width: 100%;
+    max-width: 500px;
+
+    background: var(--color-blanco);
+
+    padding: 50px 40px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.logo {
+    color: var(--color-principal);
+    font-size: 28px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.escuela-card h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.escuela-card p {
+    color: var(--color-gris);
+    margin-bottom: 30px;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.login-card h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    text-align: center;
+    color: var(--color-gris);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-principal);
+}
+
+.login-card .btn {
+    width: 100%;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: white;
+
+    padding: 18px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.navbar-logo {
+    color: var(--color-principal);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+.logout {
+    color: #dc2626 !important;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 50px 0;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: var(--color-gris);
+}
+
+/* =========================
+   MODULOS
+========================= */
+
+.modules-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.module-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid var(--color-borde);
+
+    text-decoration: none;
+
+    color: var(--color-texto);
+
+    transition: 0.2s;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--color-principal);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.module-number {
+    color: var(--color-principal);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.module-card h2 {
+    margin-bottom: 10px;
+}
+
+.module-card p {
+    color: var(--color-gris);
+}
+
+/* =========================
+   TEMAS
+========================= */
+
+.temas-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.tema-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid var(--color-borde);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-container {
+    width: 100%;
+
+    background: #111;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.links-container {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+}
+
+.links-container ul {
+    padding-left: 20px;
+}
+
+.links-container li {
+    margin: 10px 0;
+}
+
+.links-container a {
+    color: var(--color-secundario);
+}
+
+/* =========================
+   TEST
+========================= */
+
+.test-container {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+.question h3 {
+    margin-bottom: 15px;
+}
+
+.option {
+    display: block;
+
+    padding: 10px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.option:hover {
+    border-color: var(--color-principal);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .login-card {
+        padding: 30px 20px;
+    }
+
+}
