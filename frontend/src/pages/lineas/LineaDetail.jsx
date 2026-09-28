@@ -15,6 +15,33 @@ export default function LineaDetail() {
     <div>
       <PageHero eyebrow="Línea" title={linea.nombre} subtitle={linea.descripcion} gradient={linea.gradient} />
 
+      <section className="relative mx-auto max-w-5xl px-6 py-12">
+        <Reveal>
+          {linea.videoUrl ? (
+            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 shadow-2xl">
+              <iframe
+                src={linea.videoUrl}
+                title={`Video de presentación - ${linea.nombre}`}
+                className="h-full w-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ) : (
+            <div className="surface flex aspect-video w-full items-center justify-center rounded-2xl border border-white/10 shadow-2xl text-white">
+              <div className="flex flex-col items-center gap-3">
+                <span className="btn-press flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
+                  <svg viewBox="0 0 20 20" fill="currentColor" className="ml-0.5 h-6 w-6">
+                    <path d="M6 4.5v11l9-5.5-9-5.5Z" />
+                  </svg>
+                </span>
+                <p className="text-sm text-white/60">Video próximamente</p>
+              </div>
+            </div>
+          )}
+        </Reveal>
+      </section>
+
       <section className="relative mx-auto max-w-5xl px-6 py-16">
         <Reveal>
           <h2 className="text-2xl font-bold text-white">Proyectos</h2>
