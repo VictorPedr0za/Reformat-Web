@@ -1,0 +1,8 @@
+[
+  {
+    "usuario": "estudiante",
+    "salt": "3ca78981cc8a411db7e34c450c09a9fb",
+    "passwordHash": "c066a85a0ac9868747a9d8ce66e37ab25086b85fd0180bc952e14986c9d3d27b6c47b29d55f4f70d8be9a0d7ca39f36d85dbd61e5ee1098d4c43e35a50db3981",
+    "rol": "estudiante"
+  }
+]

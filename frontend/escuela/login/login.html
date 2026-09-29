@@ -27,6 +27,8 @@
                 Inicia sesión para continuar
             </p>
 
+            <p id="loginMessage" role="alert" aria-live="polite"></p>
+
             <form id="loginForm">
 
                 <div class="form-group">
@@ -76,38 +78,7 @@
     </main>
 
 
-    <script>
-
-        document
-            .getElementById("loginForm")
-            .addEventListener("submit", function(event) {
-
-                event.preventDefault();
-
-                const usuario =
-                    document.getElementById("usuario").value;
-
-                const password =
-                    document.getElementById("password").value;
-
-
-                /*
-                 * LOGIN TEMPORAL
-                 *
-                 * Más adelante esto se conectará
-                 * con el backend.
-                 */
-
-                if (usuario !== "" && password !== "") {
-
-                    window.location.href =
-                        "../asodivalle/asodisvalle.html";
-
-                }
-
-            });
-
-    </script>
+    <script src="login.js" defer></script>
 
 </body>
 

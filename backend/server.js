@@ -13,6 +13,7 @@ const cors = require("cors");
 
 const contactoRoutes = require("./routes/contacto");
 const uneteRoutes = require("./routes/unete");
+const authRoutes = require("./routes/auth");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,6 +24,7 @@ app.use(express.json());
 // Rutas de la API
 app.use("/api/contacto", contactoRoutes);
 app.use("/api/unete", uneteRoutes);
+app.use("/api/auth", authRoutes);
 
 // Ruta de prueba
 app.get("/", (req, res) => {
