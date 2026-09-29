@@ -390,21 +390,123 @@ body {
 ========================= */
 
 @media (max-width: 700px) {
-
     .modules-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .navbar {
-        padding: 15px 20px;
+        gap: 12px;
+        padding: 14px 4%;
+    }
+
+    .navbar-logo {
+        font-size: 20px;
+    }
+
+    .navbar > a,
+    .navbar .logout {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
     }
 
     .container {
         width: 92%;
+        padding: 32px 0;
+    }
+
+    .page-title {
+        margin-bottom: 28px;
+    }
+
+    .page-title h1 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.15;
+    }
+
+    .page-title p,
+    .module-card p,
+    .links-container li {
+        line-height: 1.55;
+    }
+
+    .module-card {
+        padding: 22px;
+    }
+
+    .module-card h2 {
+        font-size: clamp(19px, 5vw, 24px);
+        line-height: 1.25;
     }
 
     .login-card {
-        padding: 30px 20px;
+        padding: 28px 20px;
     }
 
+    .escuela-card {
+        padding: 36px 24px;
+    }
+
+    .escuela-card h1 {
+        font-size: clamp(32px, 9vw, 42px);
+    }
+
+    .escuela-card .btn {
+        width: 100%;
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .tema-card {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .test-container {
+        width: 100%;
+        padding: 24px 18px;
+    }
+
+    .question h3 {
+        line-height: 1.4;
+    }
+
+    .option {
+        padding: 12px;
+        line-height: 1.45;
+    }
+
+    .option input {
+        margin-right: 6px;
+    }
+
+    .links-container {
+        padding: 20px;
+    }
+
+    .links-container a {
+        overflow-wrap: anywhere;
+    }
+
+    .btn {
+        min-height: 44px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .test-container {
+        padding: 20px 14px;
+    }
 }

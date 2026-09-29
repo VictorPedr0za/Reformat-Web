@@ -126,16 +126,11 @@ como "apoyo" o dividirse una de las más cargadas.
 | **Juan David Gaviria** | Frontend | Líneas — Audiovisual y Animación (+ índice de Líneas) | `frontend/pages/lineas/index.html`, `audiovisual.html`, `animacion.html` | `feature/juandavid-lineas-audiovisual-animacion` |
 | **Juan Sarmiento** | Frontend (y algo de backend) | Líneas — Mapping, Videomapping y Web/App | `frontend/pages/lineas/mapping.html`, `videomapping.html`, `webapp.html` | `feature/juansarmiento-lineas-mapping-videomapping-webapp` |
 | **Victor Pedroza** | Frontend + Backend (líder técnico / coordina el repo) | Noticias + Contacto (frontend), coordinación general del backend, soporte de Git a todo el equipo | `frontend/pages/noticias.html`, `contacto.html`, `backend/server.js` | `feature/victor-noticias-contacto` y `feature/victor-backend-coordinacion` |
-| **Esteban Camilo Mera** | Backend | Endpoint de Contacto + pruebas del backend | `backend/routes/contacto.js` | `feature/esteban-backend-contacto` |
-| **Javier Sandoval** | Backend | Endpoint de "Únete" + configuración de despliegue (hosting) | `backend/routes/unete.js` | `feature/javier-backend-unete-deploy` |
-| **Salomé Galindez** | Diseño (no escribe código) | Paleta de colores, tipografía, banco de imágenes/fotos, revisión visual ("QA de diseño") de cada página antes de aprobar un Pull Request | Variables `:root` de `style.css` (las edita ella misma o le dicta los valores a quien esté trabajando en esa página), `docs/CONTENIDO.md` | No necesita rama de código — revisa directamente en GitHub o en Live Server |
+| **Esteban Camilo Mera** | Frontend | Login Asodisvalle y paginas | `frontend/escuela/Asodisvalle.js` | `feature/esteban-escuela-login` |
+| **Javier Sandoval** | Frontend | Pag Principal Asodisvalle y Estructura de los test | `frontend/escuela/asodisvalle` | `feature/javier-escuela-tests` |
+| **Salomé Galindez** | Diseño | Probar la pagina y testear cada seccion tanto en pc como en celular y anotar cada cosa| Variables `:root` de `style.css` (las edita ella misma o le dicta los valores a quien esté trabajando en esa página), `docs/CONTENIDO.md` | No necesita rama de código — revisa directamente en GitHub o en Live Server |
 | *(Nuevos integrantes)* | — | Toman una tarea de apoyo: reemplazar contenido placeholder, ayudar con pruebas, o dividir una de las líneas más cargadas | — | `feature/nombre-modulo` |
 
-**¿Por qué Salomé no tiene rama?** Porque su rol es de diseño visual, no de
-código. Su forma de aportar es: (a) definir los valores reales de la paleta
-y tipografía (se los pasa a quien esté editando el CSS ese día), y (b) abrir
-cada página en el navegador y decir "esto se ve bien" o "esto hay que
-ajustar" antes de aprobar un Pull Request.
 
 ---
 
@@ -156,16 +151,8 @@ git checkout develop
 
 ## 5. Cómo correr el proyecto localmente
 
-### Frontend
-No necesita instalación:
-1. Abre la carpeta `reformat-web` en VS Code.
-2. Clic derecho sobre `frontend/index.html` → **"Open with Live Server"**.
-3. Se abre en el navegador, algo como `http://127.0.0.1:5500`.
 
-> ⚠️ No abras el HTML con doble clic (`file://...`): el header/footer
-> dinámico y los formularios no van a funcionar sin un servidor local.
-
-### Backend
+### Primero correr el Backend
 ```bash
 cd backend
 npm install          # instala las dependencias (primera vez o si cambian)
@@ -173,6 +160,23 @@ cp .env.example .env # crea tu configuración local
 npm run dev           # levanta el servidor con recarga automática
 ```
 Debe aparecer: `Servidor backend corriendo en http://localhost:3000`
+
+### Segundo correr el Frontend
+No necesita instalación:
+#### Método 1 para correrlo
+1. Abre la carpeta `reformat-web` en VS Code.
+2. Clic derecho sobre `frontend/index.html` → **"Open with Live Server"**.
+3. Se abre en el navegador, algo como `http://127.0.0.1:5500`.
+
+#### Método 2 para correrlo
+```bash
+cd frontend
+npm run dev           # levanta el servidor ya completo
+```
+
+> ⚠️ No abras el HTML con doble clic (`file://...`): el header/footer
+> dinámico y los formularios no van a funcionar sin un servidor local.
+
 
 Con el backend corriendo, los formularios (Contacto, Únete a esta línea) ya
 guardan la información de verdad (por ahora en archivos JSON dentro de
