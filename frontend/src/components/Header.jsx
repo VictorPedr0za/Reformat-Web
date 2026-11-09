@@ -10,7 +10,8 @@ const NAV_LINKS = [
 ];
 
 // The escuela module is a standalone static site (frontend/escuela), so it needs a full page load, not a router link.
-const ASODISVALLE_HREF = "/escuela/asodivalle/asodisvalle.html";
+// Goes through the login first; login.html redirects to asodisvalle.html on submit.
+const ASODISVALLE_HREF = "/frontend/escuela/login/login.html";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
